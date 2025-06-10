@@ -1,24 +1,19 @@
 import React from 'react'
-
 import { Helmet } from 'react-helmet'
-
+import Navbar from '../components/Navbar'
 import './not-found.css'
 
-const NotFound = (props) => {
+const NotFound = () => {
   return (
-    <div className="not-found-container1">
+    <div className="page">
       <Helmet>
         <title>404 - Not Found</title>
       </Helmet>
-      <h3>OOPS! PAGE NOT FOUND</h3>
-      <div className="not-found-container2">
-        <h1 className="not-found-text2">404</h1>
-      </div>
-      <div className="not-found-container3">
-        <h2 className="not-found-text3">
-          WE ARE SORRY, BUT THE PAGE YOU REQUESTED WAS NOT FOUND
-        </h2>
-      </div>
+      <Navbar />
+      <main className="not-found-main">
+        <h1>404</h1>
+        <p>The page you requested was not found.</p>
+      </main>
     </div>
   )
 }
